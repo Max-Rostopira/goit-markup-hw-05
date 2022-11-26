@@ -132,23 +132,12 @@ img{
 
 
 
-.link-site-active {
+nav a.link-site-active {
     color: var(--button-background-colour);
 
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: 0.02em;
-}
-
-.link-site-active::after{
-    content:" ";
-    display:block;
-    position: relative;
-    top: 33px;
-
-    height: 4px;
-    background: #2196F3;
-    border-radius: 2px;
 }
 
 .link-site:hover,
@@ -177,23 +166,32 @@ img{
 }
 
 .header-icon{
-    
+    fill: #757575;
     display: flex;
     margin-right: 10px;
 }
 
 
-.link-contact:hover > .header-icon{
-    fill: var(--button-background-colour);
+.link-contact:hover .header-icon,
+.link-contact:focus .header-icon{
+    fill: currentColor
 }
 
-svg{
-    fill: currentColor;
+.nav-items{
+   position: relative; 
 }
 
-/*.link-contact:focus > .header-icon{
-     fill: var(--button-background-colour);
+.link-site-active::after{
+content:" ";
+display: block;
+height: 4px;
+width: 100%;
+bottom: -1px;
+background: #2196F3;
+border-radius: 2px;
+position: absolute;
 }
+
 /*====================Головний блок==========================*/
 
 .main-section{
@@ -347,20 +345,26 @@ svg{
 
 }
 
+.work-items{
+    position: relative;
+    background-color: #2196F3;
+}
+
 .work-subtitle{
+    
+    font-size: 14px;
+    line-height: 1.1px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+
+
     text-align: center;
     padding-top: 27px;
     padding-bottom: 27px;
-
-    font-weight: 700;    
-    line-height: 1.1;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
     
-    color: #FFFFFF;
-
-    position: relative;
-    bottom: 70px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     background-color: rgba(47, 48, 58, 0.8);
 }
 
@@ -476,6 +480,7 @@ svg{
 }
 
 .clients-link{
+    outline: transparent;
     display: flex;    
     border: 1px solid #AFB1B8;
     border-radius: 4px;
@@ -489,10 +494,11 @@ svg{
     fill: var(--button-background-colour);
 }
 
-.clients-icon:hover,
-.clients-icon:focus{
-    fill: var(--button-background-colour);
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon{
+fill: var(--button-background-colour);
 }
+
 
 
 /*=======================Футер============================*/
@@ -714,9 +720,8 @@ svg{
 }
 
 .portfolio-link{
+    outline: transparent;
     display: block;
-
-    position: relative;
 }
 
 .portfolio-link:hover,
@@ -728,44 +733,21 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     margin-right: 0;
 }
 
-/*======================= Портфоліо оверлей =========================*/
-
-.portfolio-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #188CE8;
-
-    transform: translateY(-50%);
-}
-
-.portfolio-link:hover .portfolio-overlay {
-    transform: translateX(0);
-}
-
-.portfolio-link {
-    position: relative;
-    overflow: hidden;
-    transition: transform 900ms ease;
-}
-
-
-
-/*========================= Модалка============================*/
-
-.modal-background{
+.backdrop{
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
+    background-color: rgba(47, 48, 58, 0.3);
 }
+
 .modal{
     position: absolute;
-    transform: translate(-50%, -50%);
-
+    width: 455px;
     height: 500px;
-    width: 500px;
-   
+    background-color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
