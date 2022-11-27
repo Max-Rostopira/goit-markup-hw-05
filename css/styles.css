@@ -130,14 +130,23 @@ img{
     
 }
 
+.nav-items{
+    position: relative;
+}
 
-
-nav a.link-site-active {
+.active {
     color: var(--button-background-colour);
+}
 
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: 0.02em;
+.active::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #2196F3;
+    border-radius: 2px;
+    bottom: -1px;
 }
 
 .link-site:hover,
@@ -173,23 +182,8 @@ nav a.link-site-active {
 
 
 .link-contact:hover .header-icon,
-.link-contact:focus .header-icon{
+.link-contact:focus .header-icon {
     fill: currentColor
-}
-
-.nav-items{
-   position: relative; 
-}
-
-.link-site-active::after{
-content:" ";
-display: block;
-height: 4px;
-width: 100%;
-bottom: -1px;
-background: #2196F3;
-border-radius: 2px;
-position: absolute;
 }
 
 /*====================Головний блок==========================*/
@@ -302,7 +296,6 @@ position: absolute;
     margin-bottom: 30px;
 
     display: flex;
-    width: 270px;
     height: 120px;
     background: #F5F4FA;
     border-radius: 4px;
@@ -312,6 +305,8 @@ position: absolute;
 }
 
 .advantage-icon {
+    width: 70px;
+    height: 70px;
     justify-content: center;
     align-items: center;
 
@@ -342,31 +337,30 @@ position: absolute;
 .work-list{
     display: flex;
     gap: 30px;
-
 }
 
 .work-items{
     position: relative;
-    background-color: #2196F3;
 }
 
 .work-subtitle{
-    
-    font-size: 14px;
-    line-height: 1.1px;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
-
-
     text-align: center;
     padding-top: 27px;
     padding-bottom: 27px;
-    
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+
     position: absolute;
     width: 100%;
+    background: rgba(47, 48, 58, 0.8);
     bottom: 0;
-    background-color: rgba(47, 48, 58, 0.8);
+
 }
+
 
 /*==========================Наша команда===============================*/
 
@@ -469,8 +463,8 @@ position: absolute;
 }
 
 .clients-icon{
-    height: 92px;
-    width: 170px;
+    width: 106px;
+    height: 60px;
     fill: #AFB1B8;
 }
 
@@ -480,6 +474,9 @@ position: absolute;
 }
 
 .clients-link{
+    align-items: center;
+    justify-content: center;
+
     outline: transparent;
     display: flex;    
     border: 1px solid #AFB1B8;
@@ -733,21 +730,3 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     margin-right: 0;
 }
 
-.backdrop{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(47, 48, 58, 0.3);
-}
-
-.modal{
-    position: absolute;
-    width: 455px;
-    height: 500px;
-    background-color: #FFFFFF;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
