@@ -131,6 +131,7 @@ img{
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-property: color ;
     
 }
 
@@ -154,6 +155,7 @@ img{
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-property: color;
 }
 
 .link-site:hover,
@@ -173,6 +175,7 @@ img{
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-property: color;
 }
 
 .link-contact:hover,
@@ -256,6 +259,7 @@ img{
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-property: background-color ;
 }
 
 
@@ -446,6 +450,7 @@ img{
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-property: background-color;
 }
 
 
@@ -459,11 +464,11 @@ img{
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-property: fill;
 }
 
 .cotiale-link:hover .cotiale-icon,
 .cotiale-link:focus .cotiale-icon{
-    background-color: var(--button-background-colour);
     fill: #EEEEEE;
 }
 
@@ -489,6 +494,7 @@ img{
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-duration: fill;
 }
 
 .clients-list{
@@ -509,12 +515,12 @@ img{
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-duration: border;
 }
 
 .clients-link:hover,
 .clients-link:focus{
     border: 1px solid var(--button-background-colour);
-    fill: var(--button-background-colour);
 }
 
 .clients-link:hover .clients-icon,
@@ -559,6 +565,7 @@ fill: var(--button-background-colour);
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-duration: color;
 
 }
 .adress-title:hover,
@@ -578,6 +585,7 @@ fill: var(--button-background-colour);
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-duration: color;
 }
 
 .foter-link-contact:hover,
@@ -614,6 +622,7 @@ fill: var(--button-background-colour);
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-property: background-color;
     
 }
 
@@ -705,6 +714,7 @@ fill: var(--button-background-colour);
 
     transition-duration: var(--time-function);
     transition-timing-function: var(--bezier-functiion);
+    transition-property: background-color ;
    
 }
 
@@ -799,6 +809,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     
     transform: translateY(100%);
     transition: transform 900ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .portfolio-link:hover .portfolio-overlay::before,
